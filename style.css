@@ -2,10 +2,22 @@ style
 { 
 margin: 0;  
  padding: 0;  
-box-sizing: border-box;  }
-body {    
-    display: flex;  
+box-sizing: border-box;  } 
+
+   body {          
+    background-color: #181135;   
+    display: flex; 
+    font-family: 'Arial' sans-serif;   
     justify-content: center; 
      align-items: center;  
-    flex-direction: column;   
-    font-family: sans-serif;  } 
+    flex-direction: column;  
+    background-size: cover; 
+    }
+
+  button {
+   display: center;
+   align-items: center;
+   justify-items: center;
+    margin-top: 140px;
+  }
+ 
