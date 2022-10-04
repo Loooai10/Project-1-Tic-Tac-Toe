@@ -78,9 +78,13 @@ function showResult(symbol) {
     result.innerHTML = 'Player 2 Win!';
   oCount= oCount+1  
 console.log(oCount)  } 
-    else {      result.innerHTML = 'Tie!';    }
+// Disable button
+    else {      result.innerHTML = 'Draw!';    }
     result.style.display = 'flex'; 
    }
+   function DisableNextButton(boardCellsId) {
+    document.getElementById(boardCellsId) }
+    
    function drp(){  document.querySelector("select").value=="0"}
   // reset game
   function restartGame(){ result.style.display = 'none';
