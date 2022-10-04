@@ -4,17 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
-        
+    <title>Tic Tac Toe</title>
 </head>
 <body>
-    <img src="https://i2.wp.com/www.tictactoeshop.com/wp-content/uploads/2018/06/logo_black.png?fit=500%2C315&ssl=1")>
+    <audio src="../music/m.mp3"></audio>
+    <div class="game">       
+        <div class="Player">
+        <p>Click on a square to place your X or O</p>
+        <p>Player 1: X</p>
+       <p>Player 2: O</p>   
+        </div>
+        <div class="board" id="board">
+        <div class="cell" id='board-cell'></div>
+        <div class="cell" id='board-cell'></div>
+        <div class="cell" id='board-cell'></div>
 
- <button onclick="location.href='http://localhost:5501/index2.html'" class="Start-Game">Start Game</button>
-   
- <!-- <button class="start"><a href="/index2.html">Start Game</a></button> -->
-  
+        <div class="cell" id='board-cell'></div>
+        <div class="cell" id='board-cell'></div>
+        <div class="cell" id='board-cell'></div>
+
+        <div class="cell" id='board-cell'></div>
+        <div class="cell" id='board-cell'></div>
+        <div class="cell" id='board-cell'></div>
+        </div>     
+          
+     <div class="result">Player 1 Win!</div>  
+   </div>      
+    <div class="turn">Player 1</div>  
+    <div>   
+        <button onclick="restartGame()"class="restart">Reset</button>  
+    </div>
+    
 </body>
+
 </html>
