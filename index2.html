@@ -9,8 +9,30 @@
     <title>Tic Tac Toe</title>
 </head>
 <body>
+    <audio src="../music/m.mp3"></audio>
+    <div class="game">       
+        <div class="">
+        <p>Click on a square to place your X or O</p>
+        <p>Player 1: X</p>
+       <p>Player 2: O</p>   
+        </div>
+        <div class="board" id="board">
+        <div class="cell" board-cell></div>
+        <div class="cell" board-cell></div>
+        <div class="cell" board-cell></div>
+        <div class="cell" board-cell></div>
+        <div class="cell" board-cell></div>
+        <div class="cell" board-cell></div>
+        <div class="cell" board-cell></div>
+        <div class="cell" board-cell></div>
+        <div class="cell" board-cell></div>
+        </div>     
+          
+     <div class="result">Player 1 Win!</div>  
+   </div>      
+    <div class="turn">Player 1</div>  
     <div>   
-        <button onclick="restartGame()"class="restart">Restart</button>  
+        <button onclick="restartGame()"class="restart">Reset</button>  
     </div>
     
 </body>
