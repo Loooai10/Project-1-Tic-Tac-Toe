@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <audio src="../music/m.mp3"></audio>
+    <div class="game">       
+        <div class="Player">
+        <p>Click on a square to place your X or O</p>
+        <p>Player 1: X</p>
+       <p>Player 2: O</p>   
+        </div>
+        <div class="board" id="board">
+        <div class="cell" id='board-cell'></div>
+        <div class="cell" id='board-cell'></div>
+        <div class="cell" id='board-cell'></div>
+
+        <div class="cell" id='board-cell'></div>
+        <div class="cell" id='board-cell'></div>
+        <div class="cell" id='board-cell'></div>
+
+        <div class="cell" id='board-cell'></div>
+        <div class="cell" id='board-cell'></div>
+        <div class="cell" id='board-cell'></div>
+        </div>
+
+         <!-- <div class="score">
+            <div class="x-wins"></div>
+            <div class="o-wins"></div>
+         </div>  -->
+     <div class="gameresult">Player 1 Win!</div>  
+   </div>      
+    <div class="playerturn">Player 1</div>  
+    <div> 
+        <!-- <button onclick="onTimer()">Time</button>
+<div id="mycounter"></div> -->
+        <button onclick="restartGame()"class="restart">Reset</button>  
+    </div>
+    
+</body>
+
+</html>

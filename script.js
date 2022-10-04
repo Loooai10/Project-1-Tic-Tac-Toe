@@ -1,11 +1,17 @@
 const boardCells = document.querySelectorAll(".cell");
-const turn = document.querySelector(".turn");
+const turn = document.querySelector(".playerturn");
 const result = document.querySelector(".gameresult");
 // assigning player symbols
 const playerOne = "X";
 const playerTwo = "O";
 xCount = 0;
 oCount = 0;
+let owins = 0;
+let xwins = 0;
+
+let xwinsText = document.querySelector('.x-wins')
+let owinsText = document.querySelector('.o-wins')
+
 //h
 // board array
 var board = [
@@ -34,7 +40,7 @@ function handleClick(cell, index) {
       // insert into array
       board[Math.floor(index / 3)][index % 3] = playerOne;
     } else {
-      console.log("playerTwo", playerTwo);
+      console.log("player2", playerTwo);
       cell.innerHTML = playerTwo;
       turn.innerHTML = "Player 1";
       // insert into array
@@ -56,6 +62,15 @@ function checkWinner() {
       board[i][0] !== ""
     ) {
       showResult(board[i][0]);
+      if (turn.innerHTML === "Player 2"){
+        xwins++
+        console.log(xwins)
+        xwinsText.innerHTML = 'xwins'
+
+      }else{
+        owins++
+        console.log(owins)
+      }
       return;
     }
   }
@@ -88,7 +103,7 @@ function checkWinner() {
     showResult(board[0][2]);
     return;
   }
-  // check for a tie
+  // check for a Draw
   // if all cells are filled and no winner
   var count = 0;
   for (let i = 0; i < 3; i++) {
@@ -99,7 +114,7 @@ function checkWinner() {
     }
   }
   if (count == 9) {
-    showResult("Tie");
+    showResult("Draw");
     return;
   }
 }
@@ -135,6 +150,7 @@ function drp() {
 }
 // reset game
 function restartGame() {
+  
   result.style.display = "none";
   turn.innerHTML = "Player 1";
   board = [
@@ -144,3 +160,36 @@ function restartGame() {
   ];
   startGame();
 }
+function gameLost() {
+  alert("😢You lose!😢");
+}
+setTimeout(gameLost, 60000);
+i = 60;
+function onTimer() {
+  document.getElementById('mycounter').innerHTML = i;
+  i--;
+  if (i < 0) {
+    alert('😢You lose!😢');
+  }
+  else {
+    setTimeout(onTimer, 1000);
+  }
+}
+
+function countdown() {
+  var seconds = 60;
+  function tick() {
+      var counter = document.getElementById("counter");
+      seconds--;
+      counter.innerHTML = "0:" + (seconds < 10 ? "0" : "") + String(seconds);
+      if( seconds > 0 ) {
+          setTimeout(tick, 1000);
+      } else {
+          alert("Game over");
+      }
+  }
+  tick();
+}
+
+// start the countdown
+countdown();
