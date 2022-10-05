@@ -9,11 +9,11 @@ const playerTwo = "O";
 let gameOver = false
 xCount = 0;
 oCount = 0;
-// let owins = 0;
-// let xwins = 0;
+let owins = 0;
+let xwins = 0;
 
-// let xwinsText = document.querySelector('.x-wins')
-// let owinsText = document.querySelector('.o-wins')
+let xwinsText = document.querySelector('.x-wins')
+let owinsText = document.querySelector('.o-wins')
 
 //h
 // board array
@@ -71,11 +71,12 @@ function checkWinner() {
       if (turn.innerHTML === "Player 2"){
         xwins++
         console.log(xwins)
-        xwinsText.innerHTML = 'xwins'
+        xwinsText.innerHTML = `${xwins}`
 
       }else{
         owins++
         console.log(owins)
+        owinsText.innerHTML = `${owins}`
       }
       return;
     }
@@ -89,9 +90,20 @@ function checkWinner() {
       board[0][i] !== ""
     ) {
       showResult(board[0][i]);
-      return;
-    }
+      if (turn.innerHTML === "Player 2"){
+        xwins++
+        console.log(xwins)
+        xwinsText.innerHTML = `${xwins}`
+
+      }else{
+        owins++
+        console.log(owins)
+        owinsText.innerHTML = `${owins}`
+    } 
+    return;
   }
+}
+
   // check for diagonals
   if (
     board[0][0] === board[1][1] &&
@@ -99,16 +111,36 @@ function checkWinner() {
     board[0][0] !== ""
   ) {
     showResult(board[0][0]);
-    return;
-  }
+    if (turn.innerHTML === "Player 2"){
+      xwins++
+      console.log(xwins)
+      xwinsText.innerHTML = `${xwins}`
+
+    }else{
+      owins++
+      console.log(owins)
+      owinsText.innerHTML = `${owins}`
+  } 
+  return;
+}
   if (
     board[0][2] === board[1][1] &&
     board[0][2] === board[2][0] &&
     board[0][2] !== ""
   ) {
     showResult(board[0][2]);
-    return;
-  }
+    if (turn.innerHTML === "Player 2"){
+      xwins++
+      console.log(xwins)
+      xwinsText.innerHTML = `${xwins}`
+
+    }else{
+      owins++
+      console.log(owins)
+      owinsText.innerHTML = `${owins}`
+ }
+  return;
+}
   // check for a Draw
   // if all cells are filled and no winner
   var count = 0;
@@ -122,8 +154,8 @@ function checkWinner() {
   if (count == 9) {
     showResult("Draw");
     return;
-  }
-}
+  }}
+
 // show result
 function showResult(symbol) {
   console.log("showResult");
@@ -176,6 +208,7 @@ function restartGame() {
   ];
   startGame();
 }
+  
 // function gameLost() {
 //   alert("😢You lose!😢");
 // }
@@ -189,8 +222,8 @@ function restartGame() {
 //   }
 //   else {
 //     setTimeout(onTimer, 1000);
-//   }
-// }
+// //   }
+// // }
 
 // function countdown() {
 //   var seconds = 60;
@@ -199,13 +232,13 @@ function restartGame() {
 //       seconds--;
 //       counter.innerHTML = "0:" + (seconds < 10 ? "0" : "") + String(seconds);
 //       if( seconds > 0 ) {
-//           setTimeout(tick, 1000);
-//       } else {
-//           alert("Game over");
-//       }
-//   }
+// //           setTimeout(tick, 1000);
+//  } else {
+// //  alert("Game over");
+// // }
+// //   }
 //   tick();
 // }
 
 // // start the countdown
-// countdown();
+// countdown(tick)

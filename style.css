@@ -1,11 +1,13 @@
+
 style
 { 
 margin: 0;  
  padding: 0;  
 } 
 
-body {          
-    background-color: #181135;   
+body {  
+  background-image: url("./img/nature.jpg");
+  /* background-color: #181135;    */
     display: flex; 
     font-family: 'Arial' sans-serif;   
     justify-content: center; 
@@ -26,7 +28,7 @@ grid-template-rows: 120px 120px 120px;
 }
 .cell {
   color: orangered;
-background-color: yellow;
+background-color: rgb(116, 236, 245);
   padding: 10px;
   border-radius: 5px;
   display: grid;
@@ -44,8 +46,54 @@ background-color: yellow;
    align-items: center;
    justify-items: center;
     margin: 0;
+    width: 150px;
+    height: 50px;
   }
 p{
-  color:antiquewhite;
+  color: rgb(0, 255, 0);
   font-size: 25px;
+  text-align: center;
+}
+.playerturn{
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.gameresult{
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.score {
+  color: bisque;
+}
+
+.x-wins {
+  width: 50px;
+  height: 50px;
+  background-color: blueviolet;
+  display: inline-block;
+  font-size: 50px;
+  text-align: center;
+  align-items: flex-end;
+}
+
+.o-wins {
+  font-size: 50px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  background-color: blueviolet;
+  display: inline-block;
+  position: fixed; 
+}
+
+.restart {
+  font-size: 30px;
+}
+
+.start-game {
+  font-size: 30px;
 }
