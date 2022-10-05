@@ -9,12 +9,13 @@
     <title>Tic Tac Toe</title>
 </head>
 <body>
+    <img srcset=""
     <audio src="../music/m.mp3"></audio>
     <div class="game">       
         <div class="Player">
-        <p>Click on a square to place your X or O</p>
-        <p>Player 1: X</p>
-       <p>Player 2: O</p>   
+        <p>Click on a button to place your X or O</p>
+        <!-- <p>Player 1: X</p>
+       <p>Player 2: O</p>    -->
         </div>
         <div class="board" id="board">
         <div class="cell" id='board-cell'></div>
@@ -34,15 +35,19 @@
             <div class="x-wins"></div>
             <div class="o-wins"></div>
          </div>  -->
-     <div class="gameresult">Player 1 Win!</div>  
+     <div class="gameresult"></div>  
    </div>      
-    <div class="playerturn">Player 1</div>  
+    <div class="playerturn"></div>  
     <div> 
         <!-- <button onclick="onTimer()">Time</button>
 <div id="mycounter"></div> -->
-        <button onclick="restartGame()"class="restart">Reset</button>  
+        <button onclick="playerx()"class="playerx">PlayerX</button>
+        <button onclick="restartGame()"class="restart">Reset</button> 
+        <button onclick="Playeo()"class="playero">PlayerO</button>
     </div>
-    
+    <section class="display">
+        Player <span class="display-player playerX">X</span>'s turn
+    </section>
 </body>
 
 </html>
