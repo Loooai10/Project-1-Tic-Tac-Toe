@@ -4,9 +4,11 @@ style
 margin: 0;  
  padding: 0;  
 } 
-
+index1.html {
+  background-image: url("https://media3.giphy.com/media/cmegx6SssTKmEFEcwj/giphy.gif?cid=790b76111df7861b6d97ced851cc0b6aec5ff81a2d3ffa83&rid=giphy.gif&ct=g");
+}
 body {  
-  background-image: url("./img/nature.jpg");
+  background-image: url("https://media3.giphy.com/media/cmegx6SssTKmEFEcwj/giphy.gif?cid=790b76111df7861b6d97ced851cc0b6aec5ff81a2d3ffa83&rid=giphy.gif&ct=g");
   /* background-color: #181135;    */
     display: flex; 
     font-family: 'Arial' sans-serif;   
@@ -26,8 +28,8 @@ grid-gap: 20px;
 grid-template-columns: 120px 120px 120px;
 grid-template-rows: 120px 120px 120px;
 }
+
 .cell {
-  color: orangered;
 background-color: rgb(116, 236, 245);
   padding: 10px;
   border-radius: 5px;
@@ -47,7 +49,7 @@ background-color: rgb(116, 236, 245);
    justify-items: center;
     margin: 0;
     width: 150px;
-    height: 50px;
+    height: 40px;
   }
 p{
   color: rgb(0, 255, 0);
@@ -69,11 +71,17 @@ p{
 .score {
   color: bisque;
 }
+.player1 {
+color: orange;
+}
+.player2 {
+  color: orangered;
 
+}
 .x-wins {
   width: 50px;
   height: 50px;
-  background-color: blueviolet;
+  background-color: orange;
   display: inline-block;
   font-size: 50px;
   text-align: center;
@@ -85,13 +93,13 @@ p{
   text-align: center;
   width: 50px;
   height: 50px;
-  background-color: blueviolet;
+  background-color: orangered;
   display: inline-block;
   position: fixed; 
 }
 
 .restart {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .start-game {

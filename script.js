@@ -4,8 +4,8 @@ const result = document.querySelector(".gameresult");
 const announcer = document.querySelector('.announcer');
 
 // assigning player symbols
-const playerOne = "X";
-const playerTwo = "O";
+let playerOne = "X";
+let playerTwo = "O";
 let gameOver = false
 xCount = 0;
 oCount = 0;
@@ -33,19 +33,22 @@ function startGame() {
 }
 // handle click event
 function handleClick(cell, index) {
-  if (!gameOver){
-    console.log(cell.innerHTML)
+ if (!gameOver){
+   console.log(cell.innerHTML)
     const cellValue = cell.innerHTML;
     console.log(cellValue);
     if (cellValue === "") {
       if (turn.innerHTML === "Player 1") {
-        cell.innerHTML = playerOne;
+      cell.innerHTML = playerOne;
+       cell.style="color:orange";
+// Fill.style.color = "blue"
         turn.innerHTML = "Player 2";
         // insert into array
         board[Math.floor(index / 3)][index % 3] = playerOne;
       } else {
         console.log("player2", playerTwo);
         cell.innerHTML = playerTwo;
+        cell.style="color:orangered"
         turn.innerHTML = "Player 1";
         // insert into array
         board[Math.floor(index / 3)][index % 3] = playerTwo;
@@ -71,12 +74,12 @@ function checkWinner() {
       if (turn.innerHTML === "Player 2"){
         xwins++
         console.log(xwins)
-        xwinsText.innerHTML = `${xwins}`
+        xwinsText.innerHTML = `player X${xwins}`
 
       }else{
         owins++
         console.log(owins)
-        owinsText.innerHTML = `${owins}`
+        owinsText.innerHTML = `player O${owins}`
       }
       return;
     }
