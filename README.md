@@ -1,5 +1,5 @@
 # Project-1-Tic-Tac-Toe
-General Assembly Logo](http://i.imgur.com/ke8USTq.png)
+<a href="https://loooai10.github.io/Project-1-Tic-Tac-Toe/">Tic-Tac-Toe Game Link</a>
 
 # Tic Tac Toe
 
